@@ -1,23 +1,100 @@
-schema: '`schema`'
-funding-source: '`funding-source`'
-title: '`title`'
+schema: tematik
+funding-source: departemen
+title: Deteksi Dini Penyakit pada Tanaman menggunakan Data Hyperspectral dan Metode Vision Transformer yang sudah Dimodifikasi
 
-leader:
-  name: '`name`'
-  department: '`department`'
-  faculty: '`faculty`'
-  institution: '`institution`'
+budget:
+  one-time-materials:
+    title: BAHAN HABIS
+    items:
+      - component: ATK
+        item: Alat tulis, percetakan, penjilidan
+        unit: Paket
+        volume: 1
+        price: 250000
+      - component: Bahan pengabdian
+        item: Pulsa
+        unit: Paket
+        volume: 1
+        price: 1000000
+      - component: Cetak materi pelatihan
+        item: Cetak modul dan materi pelatihan
+        unit: Paket
+        volume: 10
+        price: 125000
+  assets:
+    title: ALAT PENUNJANG (ASET)
+    items:
+      - component: ''
+        item: Stand Background Green Screen
+        unit: Unit
+        volume: 1
+        price: 215000
+      - component: ''
+        item: Logitech C615 Webcam Full HD 1080p Autofocus
+        unit: Unit
+        volume: 1
+        price: 1500000
+      - component: ''
+        item: MACKIE EM 91CU Microphone
+        unit: Unit
+        volume: 1
+        price: 1600000
+      - component: ''
+        item: One By Wacom Medium CTL-672/K0-CX
+        unit: Unit
+        volume: 1
+        price: 1300000
+  data-colletions:
+    title: PENGUMPULAN DATA
+    items:
+      - component: HR Sekretariat/Administrasi Peneliti
+        item: ''
+        unit: OJ
+        volume: 64
+        price: 15000
+      - component: FGD persiapan pengabdian
+        item: ''
+        unit: Paket
+        volume: 1
+        price: 800000
+      - component: HR Pengolah Data
+        item: ''
+        unit: Paket
+        volume: 3
+        price: 250000
+  reportings:
+    title: PELAPORAN
+    items:
+      - component: Jurnal Sewagati
+        item: ''
+        unit: Paket
+        volume: 1
+        price: 500000
+
+defaults:
+  member:
+    position: Anggota
+    department: Teknik Informatika
+    faculty: FTEIC
+    institution: ITS
 
 members:
-  - name: '`name`'
-    department: '`department`'
-    faculty: '`faculty`'
-    institution: '`institution`'
-  - name: '`name`'
-    department: '`department`'
-    faculty: '`faculty`'
-    institution: '`institution`'
-  - name: '`name`'
-    department: '`department`'
-    faculty: '`faculty`'
-    institution: '`institution`'
+  - name: Wijayanti Nurul Khotimah, S.Kom., M.Sc.
+    position: Ketua
+    tasks:
+      - Memastikan jalannya penelitian, Membangun modul untuk merubah sinyal menjadi gambar (modul 1)
+      - Melakukan Ujicoba
+      - Menulis Artikel dan Laporan
+  - name: Moch. Nafkhan Alzamzami, S.T., M.T.
+    tasks:
+      - Mengeksplorasi ViT Transformer
+      - Melakukan Ujicoba
+      - Menulis Artikel
+  - name: Hari Purnomo
+    tasks:
+      - Tenaga Administrasi
+  - name: Ahmad Padilla
+    position: Mahasiswa
+    tasks:
+      - Membangun koneksi antara modul 1 dengan ViT Transformer
+      - Melakukan Ujicoba

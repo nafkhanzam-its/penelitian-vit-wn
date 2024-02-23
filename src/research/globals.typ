@@ -1,3 +1,4 @@
 #import "/globals.typ": *
+#import "preprocess.typ": preprocess-data, BUDGET-KEYS
 
-#let data = yaml("/data.yaml")
+#let data = preprocess-data(data-unproc)
