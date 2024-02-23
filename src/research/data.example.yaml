@@ -1,0 +1,23 @@
+schema: '`schema`'
+funding-source: '`funding-source`'
+title: '`title`'
+
+leader:
+  name: '`name`'
+  department: '`department`'
+  faculty: '`faculty`'
+  institution: '`institution`'
+
+members:
+  - name: '`name`'
+    department: '`department`'
+    faculty: '`faculty`'
+    institution: '`institution`'
+  - name: '`name`'
+    department: '`department`'
+    faculty: '`faculty`'
+    institution: '`institution`'
+  - name: '`name`'
+    department: '`department`'
+    faculty: '`faculty`'
+    institution: '`institution`'
