@@ -1,12 +1,7 @@
 #! /bin/bash -i
 
-if [ $# -lt 1 ]; then
-  echo 1>&2 "$0: not enough arguments"
-  exit 2
-fi
-
 pushd $(bash_location)
 mkdir -p dist
-type=$1
-entry=${2:-main}
+type=research
+entry=${1:-main}
 typst compile src/main.typ dist/$type:$entry.pdf --font-path src/res/fonts --input TYPE=$type --input ENTRY=$entry

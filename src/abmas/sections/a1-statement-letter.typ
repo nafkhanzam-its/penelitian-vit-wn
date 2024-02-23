@@ -1,3 +1,0 @@
-#import "/abmas/globals.typ": *
-
-= SURAT PERNYATAAN KESEDIAAN KERJASAMA DARI MITRA
