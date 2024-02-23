@@ -4,12 +4,13 @@
 
 Bagan organisasi tim peneliti bisa dilihat pada @tab-team.
 
-#fig-tab(
+#figure(
   {
     set text(size: 10pt)
+    set enum(indent: 0pt)
     tablex(
-      columns: (auto, ..3*(10em,), 1fr),
-      [*No.*],[*Nama*],[*Departemen / Fakultas*],[*Posisi di Tim Riset*],[*Uraian Tugas*],
+      columns: (auto, ..3*(auto,), auto),
+      [*No.*],[*Nama*],[*Departemen / \ Fakultas*],[*Posisi di \ Tim Riset*],[*Uraian Tugas*],
       ..(
         data.members
           .enumerate()
@@ -17,7 +18,7 @@ Bagan organisasi tim peneliti bisa dilihat pada @tab-team.
             ((i, member)) => (
               [#{i+1}],
               [#member.name],
-              [#member.department / #member.faculty],
+              [#member.department / \ #member.faculty],
               [#member.position],
               member.tasks.map(v => [+ #v]).join()
             )
