@@ -2,74 +2,118 @@ schema: tematik
 funding-source: departemen
 title: Deteksi Dini Penyakit pada Tanaman menggunakan Data Hyperspectral dan Metode Vision Transformer yang sudah Dimodifikasi
 
+timeline:
+  unit: Bulan
+  length: 9
+  ranges:
+    - title: Studi literatur
+      range: [0, 1]
+    - title: Desain model secara Keselurahan
+      range: [1, 2]
+    - title: Implementasi modul
+      range: [2, 5]
+    - title: Implementasi modul ViT Transformer
+      range: [2, 5]
+    - title: Implementasi penggabungan 2 modul di atas
+      range: [2, 5]
+    - title: Uji Coba
+      range: [4, 6]
+    - title: Menulis hasil penelitian ke dalam karya tulis ilmiah
+      range: [6, 8]
+    - title: Menulis Laporan Akhir
+      range: [8, 9]
+
 budget:
-  one-time-materials:
-    title: BAHAN HABIS
+  - title: BAHAN HABIS
     items:
       - component: ATK
-        item: Alat tulis, percetakan, penjilidan
-        unit: Paket
+        item: Kertas
+        unit: rim
         volume: 1
-        price: 250000
-      - component: Bahan pengabdian
-        item: Pulsa
-        unit: Paket
+        price: 100000
+      - component: ATK
+        item: Bolpoint
+        unit: lusin
+        volume: 2
+        price: 50000
+      - component: ATK
+        item: Catridge Hitam printer HP
+        unit: buah
+        volume: 1
+        price: 200000
+      - component: ATK
+        item: Catridge Warna printer HP
+        unit: buah
+        volume: 1
+        price: 260000
+      - component: Konsumsi Rapat
+        item: Konsumsi rapat untuk 4 anggota
+        unit: bulan
+        volume: 9
+        price: 140000
+      - component: Paket data
+        item: Paket data untuk 2 anggota
+        unit: bulan
+        volume: 9
+        price: 200000
+  - title: ALAT PENUNJANG (ASET)
+    items:
+      - component: Penunjang Pelaporan
+        item: Printer
+        unit: buah
         volume: 1
         price: 1000000
-      - component: Cetak materi pelatihan
-        item: Cetak modul dan materi pelatihan
-        unit: Paket
-        volume: 10
-        price: 125000
-  assets:
-    title: ALAT PENUNJANG (ASET)
-    items:
-      - component: ''
-        item: Stand Background Green Screen
-        unit: Unit
-        volume: 1
-        price: 215000
-      - component: ''
-        item: Logitech C615 Webcam Full HD 1080p Autofocus
-        unit: Unit
-        volume: 1
-        price: 1500000
-      - component: ''
-        item: MACKIE EM 91CU Microphone
-        unit: Unit
-        volume: 1
-        price: 1600000
-      - component: ''
-        item: One By Wacom Medium CTL-672/K0-CX
-        unit: Unit
-        volume: 1
-        price: 1300000
-  data-colletions:
-    title: PENGUMPULAN DATA
-    items:
-      - component: HR Sekretariat/Administrasi Peneliti
-        item: ''
-        unit: OJ
-        volume: 64
-        price: 15000
-      - component: FGD persiapan pengabdian
-        item: ''
-        unit: Paket
-        volume: 1
-        price: 800000
-      - component: HR Pengolah Data
-        item: ''
-        unit: Paket
+      - component: Media Penyimpanan
+        item: Flashdisk
+        unit: buah
         volume: 3
-        price: 250000
-  reportings:
-    title: PELAPORAN
-    items:
-      - component: Jurnal Sewagati
-        item: ''
-        unit: Paket
+        price: 60000
+      - component: Penunjang Eksperimen
+        item: Monitor
+        unit: buah
         volume: 1
-        price: 500000
+        price: 2390000
+  - title: SEWA PERALATAN
+    items:
+      - component: Daftar Keanggotaan
+        item: Daftar Keanggotaan Grammarly
+        unit: member
+        volume: 1
+        price: 2110000
+      - component: Sewa alat komputasi
+        item: Sewa alat komputasi di google colab
+        unit: bulan
+        volume: 9
+        price: 150000
+  - title: HONORARIUM
+    items:
+      - component: Honorarium
+        item: Honorarium mahasiswa
+        unit: Mahasiswa
+        volume: 1
+        price: 750000
+      - component: Honorarium
+        item: Honorarium tenaga administrasi
+        unit: Orang
+        volume: 1
+        price: 1250000
+      - component: Honorarium
+        item: Honorarium anggota
+        unit: Orang
+        volume: 2
+        price: 1500000
+  - title: PELAPORAN/LUARAN
+    items:
+      - component: Publikasi
+        item: Biaya APC di IEEE Access
+        unit: paper
+        volume: 1
+        price: 30500000
+      - component: Publikasi
+        item: Proof Reading
+        unit: lembar
+        volume: 15
+        price: 250000
 
 defaults:
   member:

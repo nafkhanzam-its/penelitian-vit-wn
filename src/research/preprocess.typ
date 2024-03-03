@@ -25,16 +25,16 @@
   d.members = apply-entries(d.members, "intellectual-property-history")
 
   // calculate budget
-  d.budget.total = 0
-  for key in BUDGET-KEYS {
+  d.budget-total = 0
+  for (i, value) in d.budget.enumerate() {
     let sub-total = 0
-    for (i, item) in d.budget.at(key).items.enumerate() {
+    for (j, item) in value.items.enumerate() {
       let sub-sub-total = int(item.price * item.volume)
-      d.budget.at(key).items.at(i).total = sub-sub-total
+      d.budget.at(i).items.at(j).total = sub-sub-total
       sub-total += sub-sub-total
     }
-    d.budget.at(key).insert("total", sub-total)
-    d.budget.total += sub-total
+    d.budget.at(i).insert("total", sub-total)
+    d.budget-total += sub-total
   }
 
   d

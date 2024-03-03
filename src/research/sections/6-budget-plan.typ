@@ -2,6 +2,6 @@
 
 = RENCANA ANGGARAN DAN BIAYA
 
-Adapun total rencana anggaran belanja untuk penelitian adalah #print-rp(data.budget.total) dan rincian ditunjukkan pada tabel berikut ini.
+Adapun total rencana anggaran belanja untuk penelitian adalah #print-rp(data.budget-total) dan rincian ditunjukkan pada tabel berikut ini.
 
-#budget-template(data, BUDGET-KEYS)
+#budget-template(data)
