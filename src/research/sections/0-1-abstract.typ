@@ -22,4 +22,4 @@ Walaupun MCE-ST sudah merupakan state-of-the-art, namun akurasi dari metode ters
 Salah satunya adalah dengan memanfaatkan pretrained ViT Transformer yang sejatinya digunakan untuk data gambar.
 Oleh karena itu, di dalam penelitian ini kami mencoba untuk memodifikasi pretrained ViT Transformer agar bisa digunakan untuk data hiperspektral yang berupa sinyal yang jumlahnya terbatas.
 
-Kata Kunci  : deteksi dini penyakit pada tanaman, informasi hyperspectral, ViT Transformer untuk data sinyal
+Kata Kunci: deteksi dini penyakit pada tanaman, informasi hyperspectral, ViT Transformer untuk data sinyal

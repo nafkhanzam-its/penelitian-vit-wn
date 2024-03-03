@@ -1,3 +1,5 @@
+#import "/research/globals.typ": *
+
 = PENDAHULUAN
 
 == Latar Belakang
@@ -32,7 +34,7 @@ Hal tersebut membuat Transformer unggul dalam menyelesaikan beberapa problem di 
 Model Transformer sangat efektif dalam mengekstraksi fitur global dari data gambar hiperspektral dengan ketergantungan spektral yang panjang, terutama dalam konteks deteksi target @rao2022a.
 
 Namun, Transformer dikenal sebagai model yang haus akan data latih @hassani2021 dan berperforma baik saat dilatih dengan kumpulan data yang besar.
-Pada penelitian sebelumnya, @dosovitskiy2021 telah menunjukkan bahwa Vision Transformer (ViT) mencapai akurasi 30% lebih baik saat dilatih dengan 300 juta gambar dibandingkan saat dilatih dengan hanya 10 juta gambar.
+Pada penelitian sebelumnya, #i[@dosovitskiy2021] telah menunjukkan bahwa Vision Transformer (ViT) mencapai akurasi 30% lebih baik saat dilatih dengan 300 juta gambar dibandingkan saat dilatih dengan hanya 10 juta gambar.
 
 Masalah timbul ketika akan menggunakan Transformer untuk deteksi dini penyakit pada tanaman menggunakan data hiperspektral.
 Pasalnya, di dalam problem yang akan di selesaikan, data hiperspektral yang tersedia sangat terbatas, hanya beberapa ribu sampel data saja.
