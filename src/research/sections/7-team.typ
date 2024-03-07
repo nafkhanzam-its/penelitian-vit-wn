@@ -4,7 +4,7 @@
 
 Bagan organisasi tim peneliti bisa dilihat pada @tab-team.
 
-#figure(
+#fig-tab(
   {
     set text(size: 10pt)
     set enum(indent: 0pt)

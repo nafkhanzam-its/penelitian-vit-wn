@@ -8,7 +8,7 @@ Berbagai macam Spectral Vegetation Indexes (SVIs) yang spesifik terhadap jenis t
 Penelitian-penelitian tersebut menemukan adanya korelasi yang kuat antara ciri-ciri physiologi pada tanaman dan sinyal spectral pada rentang 530 nm-550 nm untuk mendeteksi stress pada tanaman yang disebabkan karena kekurangan air pada tanaman anggur @rapaport2015, pada rentang 600 nm-730 nm untuk mendeteksi stress karena kelebihan kandungan garam pada tanaman kedelai @iliev2009, dan rentang 531 nm-571 nm untuk mendeteksi adanya mosaic virus pada tanaman ubi @raji2015.
 
 // Figure
-#figure(
+#fig-img(
   image("res/prev-works.png"),
   caption: [Penelitian-penelitian sebelumnya.],
 ) <img-prev-works>
@@ -38,6 +38,6 @@ Sehingga pada penelitian kami sebelumnya, kami mengusulkan penggunaan modul spec
 Model tersebut kemudian disebut dengan MCE-ST.
 
 Walaupun MCE-ST lebih bagus dibandingakan dengan metode-metode deep learning berbasis konvolusi dan merupakan state of the art, namun akurasinya masih perlu ditingkatkan sehingga bisa diterapkan di dunia nyata.
-Terinspirasi dari kesuksesan penggunaan Transformer pada aplikasi visi komputer, dalam penelitian ini kami mengusulkan untuk menggunakan pretrained Vit-Transformer (Transformer yang sudah di-pretrain menggunakan data gambar) untuk menyelesaikan problem deteksi dini penyakit pada tanaman menggunakan data hiperspektral.
-Karena data hiperspektral strukturnya 1 dimensi maka kami akan mendesain suatu modul tambahan agar input yang kami miliki sesuai untuk ViT-Transformer.
+Terinspirasi dari kesuksesan penggunaan Transformer pada aplikasi visi komputer, dalam penelitian ini kami mengusulkan untuk menggunakan pretrained ViT (Transformer yang sudah di-pretrain menggunakan data gambar) untuk menyelesaikan problem deteksi dini penyakit pada tanaman menggunakan data hiperspektral.
+Karena data hiperspektral strukturnya 1 dimensi maka kami akan mendesain suatu modul tambahan agar input yang kami miliki sesuai untuk ViT.
 Dan juga kami akan mengeksplor proses fine-tuning, sehingga deteksi penyakit dini pada tanaman menggunakan data hiperspektral mampu menghasilkan performa yang maksimal.

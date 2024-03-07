@@ -46,7 +46,7 @@ Dan tantangan tersebut akan kami coba selesaikan di dalam penelitian ini.
 
 Dalam penelitian ini beberapa permasalahan yang akan kami teliti antara lain:
 + Bagaimana cara untuk mendesain Transformer-based model yang sesuai untuk menyelesaikan problem pendeteksian dini penyakit pada tanaman?
-+ Bagaimana cara untuk memanfatkan pretrained ViT -Transformer agar bisa digunakan untuk data yang berbentuk sinyal?
++ Bagaimana cara untuk memanfatkan pretrained ViT agar bisa digunakan untuk data yang berbentuk sinyal?
 + Bagaimana cara meningkatkan performa dari pendeteksian dini penyakit pada tanaman?
 
 == Tujuan Khusus

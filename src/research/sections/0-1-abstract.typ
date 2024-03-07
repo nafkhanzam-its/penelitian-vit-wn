@@ -19,7 +19,7 @@ Namun ternyata penggunaan dilated convolution kurang efektif untuk mengekstrak f
 Oleh karena itu, kami mencoba untuk menggunakan metode deep learning berbasis Transformer yang kami beri nama dengan MCE-ST untuk menyelesaikan problem tersebut.
 Metode MCE-ST ini juga sudah kami terbitkan di dalam jurnal Q1.
 Walaupun MCE-ST sudah merupakan state-of-the-art, namun akurasi dari metode tersebut masih perlu ditingkatkan sebelum diaplikasikan ke dalam dunia nyata.
-Salah satunya adalah dengan memanfaatkan pretrained ViT Transformer yang sejatinya digunakan untuk data gambar.
-Oleh karena itu, di dalam penelitian ini kami mencoba untuk memodifikasi pretrained ViT Transformer agar bisa digunakan untuk data hiperspektral yang berupa sinyal yang jumlahnya terbatas.
+Salah satunya adalah dengan memanfaatkan pretrained ViT yang sejatinya digunakan untuk data gambar.
+Oleh karena itu, di dalam penelitian ini kami mencoba untuk memodifikasi pretrained ViT agar bisa digunakan untuk data hiperspektral yang berupa sinyal yang jumlahnya terbatas.
 
-Kata Kunci: deteksi dini penyakit pada tanaman, informasi hyperspectral, ViT Transformer untuk data sinyal
+Kata Kunci: deteksi dini penyakit pada tanaman, informasi hyperspectral, ViT untuk data sinyal

@@ -12,7 +12,7 @@ timeline:
       range: [1, 2]
     - title: Implementasi modul
       range: [2, 5]
-    - title: Implementasi modul ViT Transformer
+    - title: Implementasi modul Vision Transformer
       range: [2, 5]
     - title: Implementasi penggabungan 2 modul di atas
       range: [2, 5]
@@ -131,7 +131,7 @@ members:
       - Menulis Artikel dan Laporan
   - name: Moch. Nafkhan Alzamzami, S.T., M.T.
     tasks:
-      - Mengeksplorasi ViT Transformer
+      - Mengeksplorasi Vision Transformer
       - Melakukan Ujicoba
       - Menulis Artikel
   - name: Hari Purnomo
@@ -140,5 +140,5 @@ members:
   - name: Ahmad Padilla
     position: Mahasiswa
     tasks:
-      - Membangun koneksi antara modul 1 dengan ViT Transformer
+      - Membangun koneksi antara modul 1 dengan Vision Transformer
       - Melakukan Ujicoba

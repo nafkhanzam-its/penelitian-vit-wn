@@ -5,7 +5,7 @@
 
 Jadwal detil kegiatan penelitian ditunjukkan pada @tab-schedule.
 
-#figure(
+#fig-tab(
   timeline-template(data),
   caption: [Jadwal kegiatan penelitian.],
 ) <tab-schedule>
