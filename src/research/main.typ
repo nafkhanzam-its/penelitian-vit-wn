@@ -1,9 +1,10 @@
 #import "/research/globals.typ": *
 
 #show: template.with(
-  ref-style: "apa",
+  ref-style: "apa-id.csl",
   appendices: [
-    #include "sections/a0-appendices.typ"; #pagebreak(weak: true);
+    #include "sections/a0-team.typ"; #pagebreak(weak: true);
+    #include "sections/a1-biodata.typ"; #pagebreak(weak: true);
   ],
 )
 
@@ -20,4 +21,3 @@
 #include "sections/5-schedule.typ"; #pagebreak(weak: true);
 #include "sections/6-budget-plan.typ"; #pagebreak(weak: true);
 #include "/common/references.typ"; #pagebreak(weak: true);
-#include "sections/7-team.typ"; #pagebreak(weak: true);

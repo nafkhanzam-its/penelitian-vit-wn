@@ -1,4 +1,4 @@
 #import "/globals.typ": *
-#import "preprocess.typ": preprocess-data, BUDGET-KEYS
+#import "preprocess.typ": preprocess-data
 
 #let data = preprocess-data(data-unproc)

@@ -78,8 +78,10 @@ budget:
       - component: Daftar Keanggotaan
         item: Daftar Keanggotaan Grammarly
         unit: member
-        volume: 1
-        price: 2110000
+        # volume: 1
+        # price: 2110000
+        volume: 2
+        price: 2555000
       - component: Sewa alat komputasi
         item: Sewa alat komputasi di google colab
         unit: bulan
@@ -97,11 +99,11 @@ budget:
         unit: Orang
         volume: 1
         price: 1250000
-      - component: Honorarium
-        item: Honorarium anggota
-        unit: Orang
-        volume: 2
-        price: 1500000
+      # - component: Honorarium
+      #   item: Honorarium anggota
+      #   unit: Orang
+      #   volume: 2
+      #   price: 1500000
   - title: PELAPORAN/LUARAN
     items:
       - component: Publikasi
@@ -121,19 +123,72 @@ defaults:
     department: Teknik Informatika
     faculty: FTEIC
     institution: ITS
+    institution-long: Institut Teknologi Sepuluh Nopember
+    address: Jl. Teknik Kimia, Keputih, Kec. Sukolilo, Surabaya, Jawa Timur 60111
+    sign-city: Surabaya
 
 members:
-  - name: Wijayanti Nurul Khotimah, S.Kom., M.Sc.
+  - id: WN
+    name: Wijayanti Nurul Khotimah, S.Kom., M.Sc.
+    gender: P
+    id-number: ''
+    nidn: ''
+    birth: ''
+    email: wijayanti.nurul@its.ac.id
+    phone: ''
     position: Ketua
     tasks:
       - Memastikan jalannya penelitian, Membangun modul untuk merubah sinyal menjadi gambar (modul 1)
       - Melakukan Ujicoba
       - Menulis Artikel dan Laporan
-  - name: Moch. Nafkhan Alzamzami, S.T., M.T.
+    publication-history:
+      - title: 'MCE-ST: Classifying crop stress using hyperspectral data with a multiscale conformer encoder and spectral-based tokens'
+        journal-name: International Journal of Applied Earth Observation and Geoinformation
+        number: Volume 118, April 2023, Article number 103286
+      - title: 'SC-CAN: Spectral Convolution and Channel Attention Network for Wheat Stress Classification'
+        journal-name: Remote Sensing
+        number: Volume 14, Issue 17, September 2022, Article number 4288
+      - title: 'A high-performance spectral-spatial residual network for hyperspectral image classification with small training data'
+        journal-name: Remote Sensing
+        number: Volume 12, Issue 19, October 2020, Article number 3137
+      # - title: 'Implementation of Artificial Ant Colony Algorithm (AACA) in dynamic labyrinth generation for android-based 2D games'
+      #   journal-name: 'Journal of Physics: Conference Series'
+      #   number: Volume 1511, Issue 1, 5 June 2020, Article number 012004
+      - title: Face recognition using texture features and multilayer perceptron
+        journal-name: 'Lecture Notes in Networks and Systems'
+        number: Volume 67, 2019, Pages 225-235
+      # - title: Indonesian sign language recognition using kinect and dynamic time warping
+      #   journal-name: 'Indonesian Journal of Electrical Engineering and Computer Science'
+      #   number: Volume 15, Issue 1, July 2019, Pages 495-503
+    # seminar-history:
+    # - title: Indonesian Sign Language Recognition by Using the Static and Dynamic Features
+    #   seminar-name: 2018 International Seminar on Intelligent Technology and Its Application
+    #   date-time: 2 July 2018
+  - id: NZ
+    name: Moch. Nafkhan Alzamzami, S.T., M.T.
+    gender: L
+    id-number: 3515072211990004
+    nidn: '-'
+    birth: Sidoarjo, 22 November 1999
+    email: nafkhan@its.ac.id
+    phone: 085815805174
     tasks:
       - Mengeksplorasi Vision Transformer
       - Melakukan Ujicoba
       - Menulis Artikel
+    education-history:
+      s1:
+        instition-name: Institut Teknologi Bandung
+        major: Teknik Informatika
+        start-end-year: 2018-2022
+        thesis-title: GraphQL-based Backend Service Development Tool for CRUD Operations, Authentication, and Authorization
+        supervisor-name: Dr. Fazat Nur Azizah, S.T., M.Sc.
+      s2:
+        instition-name: Institut Teknologi Bandung
+        major: Informatika
+        start-end-year: 2022-2023
+        thesis-title: Abstract Meaning Representation Parser Development for Cross-lingual Indonesian-English with BART, Input Concatenation, and Dataset Augmentation
+        supervisor-name: Dr. Masayu Leylia Khodra, S.T, M.T.
   - name: Hari Purnomo
     tasks:
       - Tenaga Administrasi

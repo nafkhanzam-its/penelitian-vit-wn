@@ -20,7 +20,7 @@ Adapun tahapan dan tanggung jawab masing-masing peneliti secara umum ditunjukkan
   Short Term Fourier Transform (STFT) adalah salah satu metode yang dapat menggambarkan frekuensi sinusoidal terhadap waktu. Dengan input sinyal terhadap waktu, STFT ini mampu merubah sinyal ke dalam image 2 dimensi. Problem yang akan diselesaikan di dalam penelitian ini, datanya bukan sinyal terhadap waktu melainkan sinyal terhadap panjang gelombang. Tapi kami berpendapat jika kami bisa memanfaatkan STFT ini untuk data hiperspektral, maka itu akan menjadi kontribusi tersendiri di dalam bidang yang kami teliti. \
   Input: sinyal hyperspectral \
   Output: gambar 2D
-+ *Melakukan percobaan terhadap Vision Transformer* \
++ *Melakukan percobaan terhadap Vision Transformer (ViT)* \
   ViT adalah metode Transformer yang diadopsi untuk input berupa data gambar. Metode ini sangat unggul dalam menyelesaikan problem-problem yang berkaitan dengan visi computer seperti pengenalan wajah, pengenalan objek, dll. Berbeda dengan problem tersebut, kami akan mencoba mengadopsi ViT untuk mengenali gambar hasil dari modul sebelumnya. \
   Input: gambar 2D \
   Output: kelas dari gambar
