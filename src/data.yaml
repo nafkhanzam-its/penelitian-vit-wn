@@ -91,12 +91,12 @@ budget:
     items:
       - component: Honorarium
         item: Honorarium mahasiswa
-        unit: Mahasiswa
+        unit: mahasiswa
         volume: 1
         price: 750000
       - component: Honorarium
         item: Honorarium tenaga administrasi
-        unit: Orang
+        unit: orang
         volume: 1
         price: 1250000
       # - component: Honorarium

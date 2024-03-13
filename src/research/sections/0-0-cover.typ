@@ -40,7 +40,7 @@
 #let write-member-entry(member) = [#member.name / #member.department / #member.faculty / #member.institution]
 
 #pad(x: -1cm)[
-  #gridx(
+  #grid(
     columns: (auto, 1fr),
     [Ketua Peneliti],[: #write-member-entry(data.members.at(0))],
     [Anggota Peneliti],[: 1. #write-member-entry(data.members.at(1))],

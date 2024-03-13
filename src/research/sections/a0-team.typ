@@ -6,11 +6,11 @@ Bagan organisasi tim peneliti bisa dilihat pada @tab-team.
 
 #fig-tab(
   {
-    set text(size: 10pt)
     set enum(indent: 0pt)
-    tablex(
-      columns: (auto, ..3*(auto,), auto),
-      [*No.*],[*Nama*],[*Departemen / \ Fakultas*],[*Posisi di \ Tim Riset*],[*Uraian Tugas*],
+    show table.cell.where(y: 0): strong
+    table(
+      columns: 5,
+      [No.],[Nama],[Departemen / \ Fakultas],[Posisi di \ Tim Riset],[Uraian Tugas],
       ..(
         data.members
           .enumerate()
