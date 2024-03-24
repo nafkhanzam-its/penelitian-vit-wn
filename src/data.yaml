@@ -189,7 +189,7 @@ members:
         start-end-year: 2022-2023
         thesis-title: Abstract Meaning Representation Parser Development for Cross-lingual Indonesian-English with BART, Input Concatenation, and Dataset Augmentation
         supervisor-name: Dr. Masayu Leylia Khodra, S.T, M.T.
-  - name: Hari Purnomo
+  - name: Hari Pramono
     exclude-from-cover: true
     tasks:
       - Tenaga Administrasi
