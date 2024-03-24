@@ -44,7 +44,7 @@
     columns: (auto, 1fr),
     [Ketua Peneliti],[: #write-member-entry(data.members.at(0))],
     [Anggota Peneliti],[: 1. #write-member-entry(data.members.at(1))],
-    ..(data.members.slice(2).enumerate().map(((i, member)) => ([], [#hide[: ]#{i+2}. #write-member-entry(member)])).flatten())
+    ..(data.members.slice(2).filter(v => not v.at("exclude-from-cover", default: false)).enumerate().map(((i, member)) => ([], [#hide[: ]#{i+2}. #write-member-entry(member)])).flatten())
   )
 ]
 

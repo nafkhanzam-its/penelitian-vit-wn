@@ -190,9 +190,11 @@ members:
         thesis-title: Abstract Meaning Representation Parser Development for Cross-lingual Indonesian-English with BART, Input Concatenation, and Dataset Augmentation
         supervisor-name: Dr. Masayu Leylia Khodra, S.T, M.T.
   - name: Hari Purnomo
+    exclude-from-cover: true
     tasks:
       - Tenaga Administrasi
   - name: Ahmad Padilla
+    exclude-from-cover: true
     position: Mahasiswa
     tasks:
       - Membangun koneksi antara modul 1 dengan Vision Transformer
