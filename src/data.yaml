@@ -68,32 +68,45 @@ budget:
         unit: buah
         volume: 3
         price: 60000
-      - component: Penunjang Eksperimen
+      - component: Penunjang Penelitian
         item: Monitor
         unit: buah
-        volume: 1
+        volume: 2
         price: 2390000
+      - component: Penunjang Penelitian
+        item: One By Wacom Medium CTL-672/K0-CX
+        unit: Unit
+        volume: 2
+        price: 1591000
+      - component: Penunjang Penelitian
+        item: Spektrofotometer
+        unit: Unit
+        volume: 1
+        price: 7500000
   - title: SEWA PERALATAN
     items:
-      - component: Daftar Keanggotaan
-        item: Daftar Keanggotaan Grammarly
-        unit: member
-        # volume: 1
-        # price: 2110000
-        volume: 2
-        price: 2555000
+      - component: Langganan
+        item: Grammarly
+        unit: akun
+        volume: 1
+        price: 2265000
       - component: Sewa alat komputasi
-        item: Sewa alat komputasi di google colab
+        item: Google Colab Pro Plus
         unit: bulan
         volume: 9
-        price: 150000
+        price: 800000
+      - component: Sewa cloud storage
+        item: Cloudflare R2 Storage (500GB)
+        unit: bulan
+        volume: 8
+        price: 490375
   - title: HONORARIUM
     items:
       - component: Honorarium
         item: Honorarium mahasiswa
         unit: mahasiswa
         volume: 1
-        price: 750000
+        price: 1250000
       - component: Honorarium
         item: Honorarium tenaga administrasi
         unit: orang
@@ -107,10 +120,10 @@ budget:
   - title: PELAPORAN/LUARAN
     items:
       - component: Publikasi
-        item: Biaya APC di IEEE Access
+        item: Biaya APC
         unit: paper
         volume: 1
-        price: 30500000
+        price: 10000000
       - component: Publikasi
         item: Proof Reading
         unit: lembar

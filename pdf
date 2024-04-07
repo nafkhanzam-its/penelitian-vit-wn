@@ -4,4 +4,4 @@ pushd $(bash_location)
 mkdir -p dist
 type=research
 entry=${1:-main}
-typst compile src/main.typ dist/$type:$entry.pdf --font-path src/res/fonts --input TYPE=$type --input ENTRY=$entry
+typst w src/main.typ dist/$type:$entry.pdf --font-path src/res/fonts --input TYPE=$type --input ENTRY=$entry
