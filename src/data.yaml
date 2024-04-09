@@ -89,17 +89,17 @@ budget:
         item: Grammarly
         unit: akun
         volume: 1
-        price: 2265000
+        price: 2290460
       - component: Sewa alat komputasi
         item: Google Colab Pro Plus
         unit: bulan
         volume: 9
-        price: 800000
+        price: 794346
       - component: Sewa cloud storage
         item: Cloudflare R2 Storage (500GB)
         unit: bulan
-        volume: 8
-        price: 490375
+        volume: 9
+        price: 438714
   - title: HONORARIUM
     items:
       - component: Honorarium
@@ -112,11 +112,6 @@ budget:
         unit: orang
         volume: 1
         price: 1250000
-      # - component: Honorarium
-      #   item: Honorarium anggota
-      #   unit: Orang
-      #   volume: 2
-      #   price: 1500000
   - title: PELAPORAN/LUARAN
     items:
       - component: Publikasi
@@ -144,16 +139,35 @@ members:
   - id: WN
     name: Wijayanti Nurul Khotimah, S.Kom., M.Sc.
     gender: P
-    id-number: ''
-    nidn: ''
-    birth: ''
-    email: wijayanti.nurul@its.ac.id
-    phone: ''
+    id-number: '198603122012122004'
+    nidn: 0012038601
+    birth: 'Tulungagung, 12 Maret 1986'
+    email: wijayanti@if.its.ac.id
+    phone: 085735221212
+    address: Departemen Teknik Informatika, ITS
     position: Ketua
     tasks:
       - Memastikan jalannya penelitian, Membangun modul untuk merubah sinyal menjadi gambar (modul 1)
       - Melakukan Ujicoba
       - Menulis Artikel dan Laporan
+    education-history:
+      s1:
+        instition-name: Institut Teknologi Sepuluh Nopember
+        major: Teknik Informatika
+        start-end-year: 2004-2008
+        thesis-title: Deteksi Kanker Pada Citra Mammogram menggunakan Algoritma Genetika
+        supervisor-name: Prof. Agus Zainal dan Dr. Anny Yuniarti
+      s2:
+        instition-name: NTUST
+        major: Computer Science and Information Engineering
+        start-end-year: 2009-2011
+        thesis-title: Object Tracking with Drifting based on Transfer Learning
+        supervisor-name: Prof. Hsing Kuo Pao
+    research-history:
+      - year: 2019
+        title: 'Pengaruh Sudut Pandang pada Pengalaman Realitas Virtual: Pandangan Tertambat vs. Pandangan Orang-Pertama'
+        funding-source: Departemen
+        funding-amount:
     publication-history:
       - title: 'MCE-ST: Classifying crop stress using hyperspectral data with a multiscale conformer encoder and spectral-based tokens'
         journal-name: International Journal of Applied Earth Observation and Geoinformation
