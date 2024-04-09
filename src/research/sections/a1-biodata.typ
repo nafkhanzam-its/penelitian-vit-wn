@@ -2,7 +2,7 @@
 
 #headz[BIODATA]
 
-#let bio(index, member, show-on-zero: true) = [
+#let bio(index, member, show-on-zero: true, extend: true) = [
   #let label = if index == 0 {
     [Ketua]
   } else {
@@ -17,7 +17,7 @@
     #{
       show table.cell.where(x: 0): strong
       table(
-        columns: 2,
+        columns: (auto, 1fr),
         [Nama Lengkap],
         [#member.name],
         [Jenis Kelamin],
@@ -85,10 +85,16 @@
     }
 
     #let arr = member.at("research-history", default: ())
+    #let col-n = 5
     #if arr.len() > 0 or show-on-zero [
+      #show: block.with(breakable: false)
       Pengalaman Penelitian dalam 5 Tahun Terakhir (Bukan Skripsi, Tesis, dan Disertasi)
       #table(
-        columns: 5,
+        columns: if (extend and arr.len() == 0) {
+          (auto, ..((col-n - 1) * (1fr,)))
+        } else {
+          col-n
+        },
         table.header(
           [No],
           [Tahun],
@@ -101,10 +107,16 @@
     ]
 
     #let arr = member.at("publication-history", default: ())
+    #let col-n = 4
     #if arr.len() > 0 or show-on-zero [
+      #show: block.with(breakable: false)
       Publikasi Artikel Ilmiah Jurnal yang Relevan Dalam 5 Tahun Terakhir
       #table(
-        columns: 4,
+        columns: if (extend and arr.len() == 0) {
+          (auto, ..((col-n - 1) * (1fr,)))
+        } else {
+          col-n
+        },
         table.header(
           [No],
           [Judul Artikel Ilmiah],
@@ -116,10 +128,16 @@
     ]
 
     #let arr = member.at("seminar-history", default: ())
+    #let col-n = 4
     #if arr.len() > 0 or show-on-zero [
+      #show: block.with(breakable: false)
       Pemakalah Seminar Ilmiah (_Oral Presentation_) yang Relevan Dalam 5 Tahun Terakhir
       #table(
-        columns: 4,
+        columns: if (extend and arr.len() == 0) {
+          (auto, ..((col-n - 1) * (1fr,)))
+        } else {
+          col-n
+        },
         table.header(
           [No],
           [Judul],
@@ -131,10 +149,16 @@
     ]
 
     #let arr = member.at("book-history", default: ())
+    #let col-n = 5
     #if arr.len() > 0 or show-on-zero [
+      #show: block.with(breakable: false)
       Karya Buku dalam 5 Tahun Terakhir
       #table(
-        columns: 5,
+        columns: if (extend and arr.len() == 0) {
+          (auto, ..((col-n - 1) * (1fr,)))
+        } else {
+          col-n
+        },
         table.header(
           [No],
           [Judul Buku],
@@ -147,10 +171,16 @@
     ]
 
     #let arr = member.at("intellectual-property-history", default: ())
+    #let col-n = 5
     #if arr.len() > 0 or show-on-zero [
+      #show: block.with(breakable: false)
       HKI dalam 10 Tahun Terakhir
       #table(
-        columns: 5,
+        columns: if (extend and arr.len() == 0) {
+          (auto, ..((col-n - 1) * (1fr,)))
+        } else {
+          col-n
+        },
         table.header(
           [No],
           [Judul/Tema HKI],
@@ -163,10 +193,16 @@
     ]
 
     #let arr = member.at("policy-history", default: ())
+    #let col-n = 5
     #if arr.len() > 0 or show-on-zero [
+      #show: block.with(breakable: false)
       Pengalaman Merumuskan Kebijakan Publik/Rekayasa Sosial Lainnya dalam 10 Tahun Terakhir
       #table(
-        columns: 5,
+        columns: if (extend and arr.len() == 0) {
+          (auto, ..((col-n - 1) * (1fr,)))
+        } else {
+          col-n
+        },
         table.header(
           [No],
           [Judul/Tema/Jenis Rekayasa Sosial Lainnya yang Telah Diterapkan],
@@ -179,10 +215,16 @@
     ]
 
     #let arr = member.at("reward-history", default: ())
+    #let col-n = 4
     #if arr.len() > 0 or show-on-zero [
+      #show: block.with(breakable: false)
       Penghargaan dalam 10 tahun Terakhir (dari pemerintah, asosiasi atau institusi lainnya)
       #table(
-        columns: 4,
+        columns: if (extend and arr.len() == 0) {
+          (auto, ..((col-n - 1) * (1fr,)))
+        } else {
+          col-n
+        },
         table.header(
           [No],
           [Jenis Penghargaan],
