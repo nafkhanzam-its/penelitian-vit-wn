@@ -158,7 +158,7 @@ members:
         thesis-title: Deteksi Kanker Pada Citra Mammogram menggunakan Algoritma Genetika
         supervisor-name: Prof. Agus Zainal dan Dr. Anny Yuniarti
       s2:
-        instition-name: NTUST
+        instition-name: National Taiwan University of Science and Technology
         major: Computer Science and Information Engineering
         start-end-year: 2009-2011
         thesis-title: Object Tracking with Drifting based on Transfer Learning
@@ -168,29 +168,43 @@ members:
         title: 'Pengaruh Sudut Pandang pada Pengalaman Realitas Virtual: Pandangan Tertambat vs. Pandangan Orang-Pertama'
         funding-source: Departemen
         funding-amount:
+      - year: 2019
+        title: 'Pendayagunaan Teknologi Virtual Reality, Augmented Reality dan Game untuk Menunjang Bidang Pendidikan dan Terapi Phobia'
+        funding-source: ITS
+        funding-amount:
+      - year: 2019
+        title: 'Pengembangan Sistem Informasi Pendataan untuk Penunjang Penelitian di LPPM ITS'
+        funding-source: ITS
+        funding-amount:
     publication-history:
       - title: 'MCE-ST: Classifying crop stress using hyperspectral data with a multiscale conformer encoder and spectral-based tokens'
         journal-name: International Journal of Applied Earth Observation and Geoinformation
-        number: Volume 118, April 2023, Article number 103286
+        number: Vol 118/2023
       - title: 'SC-CAN: Spectral Convolution and Channel Attention Network for Wheat Stress Classification'
         journal-name: Remote Sensing
-        number: Volume 14, Issue 17, September 2022, Article number 4288
+        number: Vol 14/17/2022
       - title: 'A high-performance spectral-spatial residual network for hyperspectral image classification with small training data'
         journal-name: Remote Sensing
-        number: Volume 12, Issue 19, October 2020, Article number 3137
-      # - title: 'Implementation of Artificial Ant Colony Algorithm (AACA) in dynamic labyrinth generation for android-based 2D games'
-      #   journal-name: 'Journal of Physics: Conference Series'
-      #   number: Volume 1511, Issue 1, 5 June 2020, Article number 012004
-      - title: Face recognition using texture features and multilayer perceptron
-        journal-name: 'Lecture Notes in Networks and Systems'
-        number: Volume 67, 2019, Pages 225-235
-      # - title: Indonesian sign language recognition using kinect and dynamic time warping
-      #   journal-name: 'Indonesian Journal of Electrical Engineering and Computer Science'
-      #   number: Volume 15, Issue 1, July 2019, Pages 495-503
-    # seminar-history:
-    # - title: Indonesian Sign Language Recognition by Using the Static and Dynamic Features
-    #   seminar-name: 2018 International Seminar on Intelligent Technology and Its Application
-    #   date-time: 2 July 2018
+        number: Vol 12/ No. 19/2020
+      - title: 'Implementation of Artificial Ant Colony Algorithm (AACA) in dynamic labyrinth generation for android-based 2D games'
+        journal-name: 'Journal of Physics: Conference Series'
+        number: Vol 1511/No. 1/2020
+      - title: Penggunaan Dual Sensor Leap Motion Controller untuk Sistem Isyarat Bahasa Indonesia (SIBI)
+        journal-name: 'INFORMAL: Informatics Journal'
+        number: Vol 4/No. 2/ 2019
+      - title: Indonesian sign language recognition using kinect and dynamic time warping
+        journal-name: 'Indonesian Journal of Electrical Engineering and Computer Science'
+        number: Vol 15/No. 1/2019
+      - title: Converting image into bas reliefs using image processing techniques
+        journal-name: 'Journal of Physics: Conference Series'
+        number: Vol 1196/No. 1/2019
+    reward-history:
+      - name: Eureka Award for Growth in Innovation and Enterpreneurship
+        institution: Eureka Technology Innovation & Investment, Australia
+        year: 2021
+      - name: The excellent presentation award
+        institution: Dept. Computer Science and Software Engineering, UWA, Australia
+        year: 2022
   - id: NZ
     name: Moch. Nafkhan Alzamzami, S.T., M.T.
     gender: L
@@ -199,10 +213,12 @@ members:
     birth: Sidoarjo, 22 November 1999
     email: nafkhan@its.ac.id
     phone: 085815805174
+    address: Departemen Teknik Informatika, ITS
     tasks:
       - Mengeksplorasi Vision Transformer
       - Melakukan Ujicoba
       - Menulis Artikel
+    empty-message: 'Belum ada karena baru aktif menjadi dosen per tanggal 1 Oktober 2023'
     education-history:
       s1:
         instition-name: Institut Teknologi Bandung
