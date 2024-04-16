@@ -2,7 +2,7 @@
 
 #headz[RINGKASAN/ABSTRAK]
 
-Deteksi dini penyakit pada tanaman sangat penting untuk mengurangi kerugian hasil panen dan untuk meningkatkan ketahanan pangan.
+Identifikasi dini penyakit pada tanaman sangat penting untuk mengurangi kerugian hasil panen dan untuk meningkatkan ketahanan pangan.
 Hal ini karena, jika suatu panyakit terlambat untuk dideteksi, dengan kata lain penyakit tersebut terdeteksi ketika sudah parah, maka pengobatanya akan sangat sulit dan kemungkinan penyakit tersebut akan menular ke tanaman yang lain akan semakin besar.
 Hal tersebut bisa mengancam terjadinya gagal panen.
 Oleh karena itu, pendeteksian dini penyakit pada tanaman sebelum gejala visualnya muncul sangat penting.
@@ -19,7 +19,7 @@ Namun ternyata penggunaan dilated convolution kurang efektif untuk mengekstrak f
 Oleh karena itu, kami mencoba untuk menggunakan metode deep learning berbasis Transformer yang kami beri nama dengan MCE-ST untuk menyelesaikan problem tersebut.
 Metode MCE-ST ini juga sudah kami terbitkan di dalam jurnal Q1.
 Walaupun MCE-ST sudah merupakan state-of-the-art, namun akurasi dari metode tersebut masih perlu ditingkatkan sebelum diaplikasikan ke dalam dunia nyata.
-Salah satunya adalah dengan memanfaatkan pretrained ViT yang sejatinya digunakan untuk data gambar.
-Oleh karena itu, di dalam penelitian ini kami mencoba untuk memodifikasi pretrained ViT agar bisa digunakan untuk data hiperspektral yang berupa sinyal yang jumlahnya terbatas.
+Literatur-literatur sebelumnya menyebutkan bahwa ketika suatu network berbasis Transformer dilatih menggunakan data yang banyak, maka akurasinya meningkat. Oleh karena itu, pada penelitian ini, kami ingin memanfaatkan network berbasis Transformer yang sudah dilatih menggunakan data yang banyak (pre-trained Transformer). Namun, karena pre-trained Transformer untuk data hyperspektral yang berupa sinyal belum ada, kami akan menggunakan pre-trained Transformer yang sebenarnya digunakan untuk data dengan modal yang berbeda. 
+Salah satunya adalah pretrained ViT (Vision Transformer) yang sejatinya digunakan untuk data gambar. Agar pretrained ViT tersebut bisa digunakan untuk data hiperspektral yang berupa sinyal, di dalam penelitian ini kami akan memodifikasi pretrained ViT dan menambahkan modul untuk mengubah data sinyal menjadi gambar.
 
-Kata Kunci: deteksi dini penyakit pada tanaman, informasi hyperspectral, ViT untuk data sinyal
+Kata Kunci: identifikasi dini penyakit pada tanaman, informasi hyperspectral, ViT untuk data sinyal

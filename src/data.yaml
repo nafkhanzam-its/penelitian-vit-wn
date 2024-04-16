@@ -1,6 +1,6 @@
 schema: tematik
 funding-source: departemen
-title: Deteksi Dini Penyakit pada Tanaman menggunakan Data Hyperspectral dan Metode Vision Transformer yang sudah Dimodifikasi
+title: Identifikasi Dini Penyakit pada Tanaman menggunakan Data Hyperspectral dan Metode Vision Transformer yang sudah Dimodifikasi
 
 timeline:
   unit: Bulan
@@ -205,6 +205,10 @@ members:
       - name: The excellent presentation award
         institution: Dept. Computer Science and Software Engineering, UWA, Australia
         year: 2022
+    seminar-history:
+      - title: A high performance spectral spatial residuql network for hyperspectral image classification with small training data
+        seminar-name: CSSE HDR Conference
+        date-time: 9 September 2022
   - id: NZ
     name: Moch. Nafkhan Alzamzami, S.T., M.T.
     gender: L
@@ -232,11 +236,11 @@ members:
         start-end-year: 2022-2023
         thesis-title: Abstract Meaning Representation Parser Development for Cross-lingual Indonesian-English with BART, Input Concatenation, and Dataset Augmentation
         supervisor-name: Dr. Masayu Leylia Khodra, S.T, M.T.
-  - name: Hari Pramono
-    exclude-from-cover: true
-    tasks:
-      - Tenaga Administrasi
-  - name: Ahmad Padilla
+  # - name: Hari Pramono
+  #   exclude-from-cover: true
+  #   tasks:
+  #     - Tenaga Administrasi
+  - name: Achmad Fadillah (05111940000155)
     exclude-from-cover: true
     position: Mahasiswa
     tasks:

@@ -13,7 +13,7 @@ Penelitian-penelitian tersebut menemukan adanya korelasi yang kuat antara ciri-c
   caption: [Penelitian-penelitian sebelumnya.],
 ) <img-prev-works>
 
-Karena penggunaan SVIs sifatnya khusus tergantung pada jenis tanaman dan jenis penyakit sehingga sulit untuk digeneralisasi, beberapa peneliti memilih menggukan metode pemilihan fitur untuk memilih beberapa fitur yang penting dari sinyal hiperspektral dari pada menggunakan SVIs.
+Penggunaan SVIs sifatnya khusus, tergantung pada jenis tanaman dan jenis penyakit, sehingga sulit untuk digeneralisasi. Beberapa peneliti akhirnya menggukan metode pemilihan fitur untuk mengambil beberapa fitur yang penting dari sinyal hiperspektral dari pada menggunakan SVIs.
 #i[@moghimi2018] menggunakan ensamble feature selection untuk memilih 15 band yang paling penting dari 215 band yang tersedia yang selanjutnya band-band terpilih tadi diproses menggunakan quadratic discriminant analysis (QDA) untuk mendeteksi stress karena kelebihan garam pada tanaman.
 Penelitian lainnya menggunakan PCA untuk mengurangi dimensi hyperspectral dari 2500 menjadi 30 dan kemudian menggunakan support vector machine (SVM).
 
@@ -37,7 +37,7 @@ Contohnya dalam aplikasi pendeteksian dini penyakit pada tanaman, data hiperspek
 Sehingga pada penelitian kami sebelumnya, kami mengusulkan penggunaan modul spectral-to-token (S2T) dan multiscale conformer encoder (MCE) yang membuat Transformer mampu mengekstraksi fitur-fitur pada data hiperspektral walaupun jumlah data latih yang tersedia terbatas @khotimah2023.
 Model tersebut kemudian disebut dengan MCE-ST.
 
-Walaupun MCE-ST lebih bagus dibandingakan dengan metode-metode deep learning berbasis konvolusi dan merupakan state of the art, namun akurasinya masih perlu ditingkatkan sehingga bisa diterapkan di dunia nyata.
+Walaupun MCE-ST lebih bagus dibandingakan dengan metode-metode deep learning berbasis konvolusi dan merupakan _state-of-the-art_, namun akurasinya masih perlu ditingkatkan sehingga bisa diterapkan di dunia nyata.
 Terinspirasi dari kesuksesan penggunaan Transformer pada aplikasi visi komputer, dalam penelitian ini kami mengusulkan untuk menggunakan pretrained ViT (Transformer yang sudah di-pretrain menggunakan data gambar) untuk menyelesaikan problem deteksi dini penyakit pada tanaman menggunakan data hiperspektral.
 Karena data hiperspektral strukturnya 1 dimensi maka kami akan mendesain suatu modul tambahan agar input yang kami miliki sesuai untuk ViT.
 Dan juga kami akan mengeksplor proses fine-tuning, sehingga deteksi penyakit dini pada tanaman menggunakan data hiperspektral mampu menghasilkan performa yang maksimal.
