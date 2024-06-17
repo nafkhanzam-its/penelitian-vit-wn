@@ -6,6 +6,7 @@ This file is to save the information about HSI
 """
 
 from scipy import io, misc
+import pickle
 
 import numpy as np
 import os
@@ -19,9 +20,13 @@ def open_file(dataset):
     if ext == '.mat':
         # Load Matlab array
         return io.loadmat(dataset)
+        # return h5py.File(dataset, 'r+')
     elif ext == '.tif' or ext == '.tiff':
         # Load TIFF file
         return misc.imread(dataset)
+    elif ext == '.pkl':
+        with open(dataset, 'rb') as f:
+            return pickle.load(f)
     elif ext == '.hdr':
         img = spectral.open_image(dataset)
         return img.load()
@@ -298,7 +303,7 @@ class HSI():
             # Load the data
 
             self.folder = str(hyperparams['folder']) + 'Cassava' + '/'
-            all_data = open_file(self.folder + 'ScreenHouseCassava_b.mat')
+            all_data = open_file(self.folder + 'ScreenHouseCassava_b.pkl')
             img = all_data["data"]
             label = all_data["label"]
             self.rgb_bands = (55, 41, 12)  # this value is random

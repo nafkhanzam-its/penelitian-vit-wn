@@ -127,8 +127,8 @@ def create_kfold(name,k,size):
     elif name=='CassavaNew': #I used the new cassava dataset
         flag = 0
         UseGroup = 1
-        folder='D:\\Wijayanti\\Datasets\\Cassava\\'
-        all_data = open_file(folder+'ScreenHouseCassava_b.mat')
+        folder='Data/Cassava/'
+        all_data = open_file(folder+'ScreenHouseCassava_b.pkl')
         data = all_data["data"]
         gt = all_data["label"]
         group = all_data["plant"]
@@ -229,7 +229,7 @@ def create_kfold(name,k,size):
 
 def open_kfold(name,i):
     
-    data_name='Data\\train_test_'+name+'_'+str(i)+'.pkl'
+    data_name='Data/train_test_'+name+'_'+str(i)+'.pkl'
     
     with open(data_name,'rb') as f:
         train_index,test_index=pickle.load(f)

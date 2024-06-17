@@ -141,8 +141,8 @@ if args.dataset != None:
 else:
     hyperparams = {
         "dataset": "CassavaNew",  # this is for salt stress dataset
-        "folder": "Data\\",
-        "model": "RandomForest", 
+        "folder": "Data/",
+        "model": "RandomForest",
         "epoch": 200,
         "runs": 10,
         "flag": 0,
