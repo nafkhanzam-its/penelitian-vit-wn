@@ -7,8 +7,8 @@ import argparse
 import numpy as np
 
 # Torch
-import torch
-import torch.utils.data as datatorch  # what is it for?
+# import torch
+# import torch.utils.data as datatorch  # what is it for?
 #from torchsummary import summary
 
 # connecting the class
@@ -16,26 +16,31 @@ from HSI import *
 from experiment import Experiment
 
 import math
-from MyHyperX import *
+# from MyHyperX import *
 from sklearn import metrics, preprocessing
 import random
+from print_dict import pd as print_dict
 
 from utils2 import weights_init
 import matplotlib.pyplot as plt
 from scipy.signal import spectrogram
-import pywt
+# import pywt
 from scipy import io, misc
 
-import numpy as np
 import os
-import spectral
+# import spectral
 from sklearn import preprocessing
 from sklearn.decomposition import PCA
 from sklearn.svm import SVC
 from sklearn.ensemble import RandomForestClassifier, VotingClassifier, GradientBoostingClassifier, StackingClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import RandomizedSearchCV
 
+import irf
+from irf import (irf_utils, utils,
+                 irf_jupyter_utils)
+from irf.ensemble.wrf import RandomForestClassifierWithWeights
 
 
 def get_dinamic_bacth(size, n):
@@ -87,85 +92,96 @@ def sig2imgWavelet(data_all):
     return data_cwt
 
 
-parser = argparse.ArgumentParser(
-    description="Run deep learning experiments on various hyperspectral datasets with various method")
-parser.add_argument('--dataset', type=str, help="Dataset name to use.")
-parser.add_argument('--model', type=str, default="MCE-ST",
-                    help="Model to train. Available:\n"
-                         "ssrn (based on paper 25), "
-                         "mou (1D RNN)")
-parser.add_argument('--folder', type=str, help="dataset location "
-                                               "datasets (defaults to the current working directory).",
-                    default="Datasets/")
-parser.add_argument('--cuda', type=int, default=-1,
-                    help="Specify CUDA device (defaults to -1, which learns on CPU)")
-parser.add_argument('--runs', type=int, default=1, help="Number of runs (default: 1)")
+# parser = argparse.ArgumentParser(
+#     description="Run deep learning experiments on various hyperspectral datasets with various method")
+# parser.add_argument('--dataset', type=str, help="Dataset name to use.")
+# parser.add_argument('--model', type=str, default="MCE-ST",
+#                     help="Model to train. Available:\n"
+#                          "ssrn (based on paper 25), "
+#                          "mou (1D RNN)")
+# parser.add_argument('--folder', type=str, help="dataset location "
+#                                                "datasets (defaults to the current working directory).",
+#                     default="Data/")
+# parser.add_argument('--cuda', type=int, default=-1,
+#                     help="Specify CUDA device (defaults to -1, which learns on CPU)")
+# parser.add_argument('--runs', type=int, default=1, help="Number of runs (default: 1)")
 
-# Dataset options
-group_dataset = parser.add_argument_group('Dataset')
-group_dataset.add_argument('--training_sample', type=float, default=10,
-                           help="Percentage of samples to use for training (default: 10%)")
-# if the percentage is between 0 and 1, so it was in percent, but if more than one mean the number of training in each class
-group_dataset.add_argument('--sampling_mode', type=str, help="Sampling mode"
-                                                             " (random sampling or disjoint, default: random)",
-                           default='random')
-group_dataset.add_argument('--norm_type', type=str, default='scale', help="the mode of the training")
-# Training options
-group_train = parser.add_argument_group('Training')
-group_train.add_argument('--epoch', type=int, default=200, help="Training epochs (optional, if"
-                                                                " absent will be set by the model)")
-group_train.add_argument('--patch_size', type=int,
-                         help="Size of the spatial neighbourhood (optional, if "
-                              "absent will be set by the model)")
-group_train.add_argument('--lr', type=float, default=0.0002,
-                         help="Learning rate, set by the model if not specified.")
-group_train.add_argument('--batch_size', type=int, default=256,
-                         help="Batch size (optional, if absent will be set by the model")
-group_train.add_argument('--kernel_size', type=int,
-                         help="Kernel size (optional, if absent will be set by the model")
-group_train.add_argument('--padded', type=int, default=1,
-                         help="the data is padded or not (the default is one, which means yes)")
-group_train.add_argument('--val_size', type=int, default=0.1,
-                         help="validation size (optional, if absent will be set by the model")
-group_model = parser.add_argument_group('Model')
-group_model.add_argument('--dmodel', type=int, default=96, help="the size of feature vector")
-group_model.add_argument('--nhead', type=int, default=4, help="the number of head in MHA")
-group_model.add_argument('--depth', type=int, default=5, help="the number of encoder")
-group_model.add_argument('--dropout', type=float, default=0.1)
+# # Dataset options
+# group_dataset = parser.add_argument_group('Dataset')
+# group_dataset.add_argument('--training_sample', type=float, default=10,
+#                            help="Percentage of samples to use for training (default: 10%)")
+# # if the percentage is between 0 and 1, so it was in percent, but if more than one mean the number of training in each class
+# group_dataset.add_argument('--sampling_mode', type=str, help="Sampling mode"
+#                                                              " (random sampling or disjoint, default: random)",
+#                            default='random')
+# group_dataset.add_argument('--norm_type', type=str, default='scale', help="the mode of the training")
+# # Training options
+# group_train = parser.add_argument_group('Training')
+# group_train.add_argument('--epoch', type=int, default=200, help="Training epochs (optional, if"
+#                                                                 " absent will be set by the model)")
+# group_train.add_argument('--patch_size', type=int,
+#                          help="Size of the spatial neighbourhood (optional, if "
+#                               "absent will be set by the model)")
+# group_train.add_argument('--lr', type=float, default=0.0002,
+#                          help="Learning rate, set by the model if not specified.")
+# group_train.add_argument('--batch_size', type=int, default=256,
+#                          help="Batch size (optional, if absent will be set by the model")
+# group_train.add_argument('--kernel_size', type=int,
+#                          help="Kernel size (optional, if absent will be set by the model")
+# group_train.add_argument('--padded', type=int, default=1,
+#                          help="the data is padded or not (the default is one, which means yes)")
+# group_train.add_argument('--val_size', type=int, default=0.1,
+#                          help="validation size (optional, if absent will be set by the model")
+# group_model = parser.add_argument_group('Model')
+# group_model.add_argument('--dmodel', type=int, default=96, help="the size of feature vector")
+# group_model.add_argument('--nhead', type=int, default=4, help="the number of head in MHA")
+# group_model.add_argument('--depth', type=int, default=5, help="the number of encoder")
+# group_model.add_argument('--dropout', type=float, default=0.1)
 
-args = parser.parse_args()
+# args = parser.parse_args()
 
-if args.dataset != None:
-    hyperparams = vars(args)  # the type of hyperparams is dictionary
-    print("args is null ")
+import sys
+model = sys.argv[1:]
+if len(model) > 0:
+    model = model[0]
 else:
-    hyperparams = {
-        "dataset": "CassavaNew",  # this is for salt stress dataset
-        "folder": "Data/",
-        "model": "RandomForest",
-        "epoch": 200,
-        "runs": 10,
-        "flag": 0,
-        "training_sample": 0.7,
-        "val_size": 0,
-        "sampling_mode": "kfold",
-        "lr": 0.0002,
-        "patch_size": 17,
-        "batch_size": 256,
-        "ignored_labels": 0,
-        "norm_type": "scale",
-        "padded": 1,
-        "dmodel": 96,
-        "nhead": 4,
-        "depth": 5,
-        "dropout": 0.1,
-        "ignored_labels": [0],
-        "supervision": "full",
-        "device": "cuda",
-        "Beta": 1,  # this is wor class weight loss for imbalance data
-        "channels": 1,
-        "restore": None,
-    }
+    model = "RandomForest"
+print(model)
+
+# if args.dataset != None:
+#     hyperparams = vars(args)  # the type of hyperparams is dictionary
+#     print("args is null ")
+# else:
+hyperparams = {
+    "dataset": "CassavaNew",  # this is for salt stress dataset
+    "folder": "Data/",
+    "model": model,
+    "epoch": 200,
+    "runs": 10,
+    "flag": 0,
+    "training_sample": 0.7,
+    "val_size": 0,
+    "sampling_mode": "kfold",
+    "lr": 0.0002,
+    "patch_size": 17,
+    "batch_size": 256,
+    "ignored_labels": 0,
+    "norm_type": "scale",
+    "padded": 1,
+    "dmodel": 96,
+    "nhead": 4,
+    "depth": 5,
+    "dropout": 0.1,
+    "ignored_labels": [0],
+    "supervision": "full",
+    "device": "cuda",
+    "Beta": 1,  # this is wor class weight loss for imbalance data
+    "channels": 1,
+    "restore": None,
+}
+
+print_dict(hyperparams)
+
 # Receive the argument
 
 sampling_mode = hyperparams['sampling_mode']
@@ -337,6 +353,42 @@ for index_range in range(index_range, index_range + ITER):
 
                 # Predict on the test set
                 y_pred = stacking_clf.predict(x_test)
+            elif hyperparams["model"]=="irf":
+                K = 5
+                rf = RandomForestClassifierWithWeights(
+                    n_estimators=100,
+                    random_state=42,
+                    n_jobs=8,
+                )
+                all_rf_weights, all_K_iter_rf_data, \
+                    all_rf_bootstrap_output, all_rit_bootstrap_output, \
+                    stability_score = irf_utils.run_iRF(
+                        X_train=x_train,
+                        X_test=x_test,
+                        y_train=y_train,
+                        y_test=y_test,
+                        K=K,
+                        rf=rf,
+                        random_state_classifier=42,
+                        B=30,
+                        propn_n_samples=.2,
+                        bin_class_type=1,
+                        M=20,
+                        max_depth=5,
+                        noisy_split=False,
+                        num_splits=2,
+                        signed=True,
+                        n_estimators_bootstrap=5,
+                    )
+
+                final_weights = all_rf_weights[f'rf_weight{K}']
+                rf = RandomForestClassifierWithWeights(
+                    n_estimators=100,
+                    random_state=42,
+                    n_jobs=8,
+                )
+                rf.fit(x_train, y_train, feature_weight=final_weights)
+                y_pred = rf.predict(x_test)
 
             overall_acc = metrics.accuracy_score(y_pred, y_test_save)
             print("Accuracy: ", overall_acc)
@@ -396,7 +448,7 @@ if ITER > 1:
     print("ListAA: {}".format(listAA))
     print("ListKappa: {}".format(listkappa))
     print("ListEach_Accuracy: {}".format(listEA))
-    print("List F-mean: {}".format(ListFmean))
-    print("List F-1: {}".format(listF1))
+    print("List-F-mean: {}".format(ListFmean))
+    print("List-F-1: {}".format(listF1))
 
 #4. Do testing using CNN

@@ -304,8 +304,8 @@ class HSI():
 
             self.folder = str(hyperparams['folder']) + 'Cassava' + '/'
             all_data = open_file(self.folder + 'ScreenHouseCassava_b.pkl')
-            img = all_data["data"]
-            label = all_data["label"]
+            img = np.array(all_data["data"])
+            label = np.array(all_data["label"])
             self.rgb_bands = (55, 41, 12)  # this value is random
             self.img_channels = img.shape[1]
 

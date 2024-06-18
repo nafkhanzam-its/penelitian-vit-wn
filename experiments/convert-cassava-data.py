@@ -8,7 +8,7 @@ with open(filename, 'r') as f:
   reader = csv.reader(f, delimiter=',')
   ncol = len(next(reader))
   print ("number of columns: ", ncol)
-  included_cols=[i for i in range(ncol-10) ]
+  included_cols=[i for i in range(ncol-9) ]
   #f.seek(0)
 
   data =[]
