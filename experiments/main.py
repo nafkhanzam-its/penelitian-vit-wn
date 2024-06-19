@@ -231,8 +231,7 @@ data_pca = pca.fit_transform(data)
 data_img = data_pca
 
 
-index_range = 0
-for index_range in range(index_range, index_range + ITER):
+for index_range in range(0, ITER):
     print("Iteration: {}".format(index_range + 1))
 
     # np.random.seed(seeds)
@@ -283,6 +282,15 @@ for index_range in range(index_range, index_range + ITER):
                 # Make predictions on the test data
                 y_pred = svm_classifier.predict(x_test)
             elif hyperparams["model"]=="RandomForest":
+                #? Best from RandomizedSearchCV
+                rf_classifier = RandomForestClassifier(
+                    bootstrap=False,
+                    max_depth=60,
+                    max_features='log2',
+                    min_samples_leaf=2,
+                    n_estimators=600,
+                    random_state=42,
+                )
                 # Create a Random Forest classifier
                 rf_classifier = RandomForestClassifier(n_estimators=100, random_state=42)
 
@@ -356,9 +364,12 @@ for index_range in range(index_range, index_range + ITER):
             elif hyperparams["model"]=="irf":
                 K = 5
                 rf = RandomForestClassifierWithWeights(
-                    n_estimators=100,
+                    bootstrap=False,
+                    max_depth=60,
+                    max_features='log2',
+                    min_samples_leaf=2,
+                    n_estimators=600,
                     random_state=42,
-                    n_jobs=8,
                 )
                 all_rf_weights, all_K_iter_rf_data, \
                     all_rf_bootstrap_output, all_rit_bootstrap_output, \
@@ -369,23 +380,19 @@ for index_range in range(index_range, index_range + ITER):
                         y_test=y_test,
                         K=K,
                         rf=rf,
-                        random_state_classifier=42,
-                        B=30,
-                        propn_n_samples=.2,
-                        bin_class_type=1,
-                        M=20,
-                        max_depth=5,
-                        noisy_split=False,
-                        num_splits=2,
-                        signed=True,
-                        n_estimators_bootstrap=5,
+                        B=45, M=8, bin_class_type=1, max_depth=7,
+                        n_estimators_bootstrap=5, noisy_split=False, num_splits=4,
+                        propn_n_samples=0.2, random_state_classifier=42, signed=False
                     )
 
                 final_weights = all_rf_weights[f'rf_weight{K}']
                 rf = RandomForestClassifierWithWeights(
-                    n_estimators=100,
+                    bootstrap=False,
+                    max_depth=60,
+                    max_features='log2',
+                    min_samples_leaf=2,
+                    n_estimators=600,
                     random_state=42,
-                    n_jobs=8,
                 )
                 rf.fit(x_train, y_train, feature_weight=final_weights)
                 y_pred = rf.predict(x_test)
