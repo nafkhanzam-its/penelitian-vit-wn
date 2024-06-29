@@ -1,0 +1,3 @@
+#!/bin/bash -ei
+
+tectonic -X watch
