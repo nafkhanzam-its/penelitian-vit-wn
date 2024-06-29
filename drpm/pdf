@@ -3,5 +3,6 @@
 pushd $(bash_location)
 mkdir -p dist
 type=research
-entry=${1:-main}
+entry=${1:-proposal}
+
 typst w src/main.typ dist/$type:$entry.pdf --font-path src/res/fonts --input TYPE=$type --input ENTRY=$entry

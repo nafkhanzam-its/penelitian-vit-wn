@@ -1,1 +1,1 @@
-#include sys.inputs.TYPE + "/" + sys.inputs.ENTRY + ".typ"
+#include sys.inputs.TYPE + "/entry-" + sys.inputs.ENTRY + ".typ"

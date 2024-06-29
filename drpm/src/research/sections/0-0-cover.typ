@@ -5,7 +5,7 @@
 
 #let border-width = 12pt
 
-#show: (body) => {
+#show: body => {
   set page(margin: 0pt)
   rect(
     width: 100%,
@@ -19,7 +19,7 @@
 #[
   #set text(weight: "bold", size: 14pt)
 
-  PROPOSAL \
+  #entry.cover-title \
   SKEMA PENELITIAN #upper(data.schema) \
   SUMBER DANA #upper(data.funding-source) \
   TAHUN #display-year
@@ -44,7 +44,16 @@
     columns: (auto, 1fr),
     [Ketua Peneliti],[: #write-member-entry(data.members.at(0))],
     [Anggota Peneliti],[: 1. #write-member-entry(data.members.at(1))],
-    ..(data.members.slice(2).filter(v => not v.at("exclude-from-cover", default: false)).enumerate().map(((i, member)) => ([], [#hide[: ]#{i+2}. #write-member-entry(member)])).flatten())
+    ..(
+      data.members.slice(2).filter(v => not v.at("exclude-from-cover", default: false)).enumerate().map((
+        (i, member),
+      ) => (
+        [],
+        [#hide[: ]#{
+            i + 2
+          }. #write-member-entry(member)],
+      )).flatten()
+    )
   )
 ]
 
