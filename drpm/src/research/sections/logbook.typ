@@ -11,47 +11,36 @@
   columns: 3,
   [*No*], [*Tanggal*], [*Kegiatan*],
   [#counter-disp()],
-  [1 Maret 2024],
+  [4 Juni 2024],
   [
-    Catatan: Rapat diskusi mengenai pengabdian masyarakat untuk Lab. Komputasi berbasis Jaringan dan Lab. Teknologi Jaringan dan Keamanan Siber Cerdas.
+    Diskusi tentang pelaksanaan penelitian online melalui zoom
 
-    Dokumen Pendukung:
-    // #align(center, image("res/meeting.jpeg", fit: "contain"))
+    Berikut link zoomnya: https://its-ac-id.zoom.us/my/nafkhanzam
   ],
 
   [#counter-disp()],
-  [8 Maret 2024],
+  [10-14 Juni 2024],
   [
-    Catatan: Mendapatkan persetujuan kesediaan kerjasama dari Bapak Kepala Sekolah SD Raden Patah.
+    Download dataset dan mengolahnya. Berikut adalah hasil plot salah satu data.
 
-    Dokumen Pendukung:
-    // #align(center, image("res/statement-signed.png", fit: "contain", height: 40%))
+    #align(center, image("res/signal.png", fit: "contain"))
   ],
 
   [#counter-disp()],
-  [15 Mei 2024],
+  [20-22 Juni 2024],
   [
-    Catatan: Diskusi mengenai pembuatan materi pelatihan.
+    Mengolah data hyperspectral menjadi image 2D. Berikut contoh hasilnya
 
-    Dokumen Pendukung:
-    // #align(center, image("res/ppt-discussion.png", fit: "contain", height: 40%))
+    #align(center, image("res/spectogram.png", fit: "contain"))
+    atau
+    #align(center, image("res/scalogram.png", fit: "contain"))
   ],
 
   [#counter-disp()],
-  [10 Juni 2024],
+  [26-28 Juni 2024],
   [
-    Catatan: Diskusi mengenai desain sertifikat pelatihan.
+    Melakukan Ujicoba untuk mendapatkan performa dari metode pembanding. Berikut adalah contoh hasilnya:
 
-    Dokumen Pendukung:
-    // #align(center, image("res/certificate-discussion.png", fit: "contain", height: 40%))
-  ],
-
-  [#counter-disp()],
-  [18 Juni 2024],
-  [
-    Catatan: Koordinasi dengan mahasiswa admin lab yang terlibat di pengabdian masyarakat ini.
-
-    Dokumen Pendukung:
-    // #align(center, image("res/student-discussion.png", fit: "contain", height: 70%))
+    #align(center, image("res/results.png", fit: "contain"))
   ],
 )

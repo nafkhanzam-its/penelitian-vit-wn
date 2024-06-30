@@ -11,7 +11,7 @@
   ],
 )
 
-#include "sections/0-0-cover.typ"; #pagebreak(weak: true);
+#include "sections/0-0-cover-white.typ"; #pagebreak(weak: true);
 #set page(numbering: "i")
 #include "/common/outline.typ"; #pagebreak(weak: true);
 #include "sections/0-1-abstract.typ"; #pagebreak(weak: true);

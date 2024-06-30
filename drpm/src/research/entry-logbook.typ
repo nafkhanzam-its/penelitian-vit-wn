@@ -7,7 +7,7 @@
   ref-style: "apa-id.csl",
 )
 
-#include "sections/0-0-cover.typ"; #pagebreak(weak: true);
+#include "sections/0-0-cover-blue.typ"; #pagebreak(weak: true);
 #set page(numbering: "1")
 #counter(page).update(1)
 #include "sections/logbook.typ"; #pagebreak(weak: true);

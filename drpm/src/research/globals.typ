@@ -4,12 +4,27 @@
 #let data = preprocess-data(data-unproc)
 #let entry = (
   "proposal": (
-    cover-title: [PROPOSAL],
+    cover-title: [
+      PROPOSAL \
+      SKEMA PENELITIAN #upper(data.schema) \
+      SUMBER DANA #upper(data.funding-source) \
+      TAHUN #display-year
+    ],
   ),
   "progress": (
-    cover-title: [LAPORAN KEMAJUAN],
+    cover-title: [
+      LAPORAN KEMAJUAN \
+      SKEMA PENELITIAN #upper(data.schema) \
+      SUMBER DANA #upper(data.funding-source) \
+      TAHUN #display-year
+    ],
   ),
   "logbook": (
-    cover-title: [CATATAN HARIAN],
+    cover-title: [
+      #text(size: 24pt)[CATATAN HARIAN] \
+      PENELITIAN #upper(data.schema) \
+      DANA #upper(data.funding-source) \
+      TAHUN #display-year
+    ],
   ),
 ).at(sys.inputs.ENTRY)

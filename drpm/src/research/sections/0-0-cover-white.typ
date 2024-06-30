@@ -19,10 +19,7 @@
 #[
   #set text(weight: "bold", size: 14pt)
 
-  #entry.cover-title \
-  SKEMA PENELITIAN #upper(data.schema) \
-  SUMBER DANA #upper(data.funding-source) \
-  TAHUN #display-year
+  #entry.cover-title
 
   #v(1fr)
 
